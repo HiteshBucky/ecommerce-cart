@@ -4,6 +4,12 @@
   "description": "E-commerce",
   "main": "index.js",
   "scripts": {
+    "migrate": "npx sequelize-cli db:migrate",
+    "migrate:undo": "npx sequelize-cli db:migrate:undo",
+    "migrate:undo:all": "npx sequelize-cli db:migrate:undo:all",
+    "seed": "npx sequelize-cli db:seed:all",
+    "seed:undo": "npx sequelize-cli db:seed:undo:all",
+    "db:reset": "npm run migrate:undo:all && npm run migrate && npm run seed",
     "test": "jest",
     "test:watch": "npm run test -- --watch",
     "dev": "nodemon index.js",
