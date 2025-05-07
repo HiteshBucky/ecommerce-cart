@@ -53,6 +53,7 @@ module.exports = {
       code: { type: Sequelize.STRING, unique: true },
       is_used: { type: Sequelize.BOOLEAN, defaultValue: false },
       discount_percent: { type: Sequelize.INTEGER, defaultValue: 10 },
+      nth_order: { type: Sequelize.INTEGER, allowNull: false },
       created_at: Sequelize.DATE,
       updated_at: Sequelize.DATE,
     });
