@@ -1,8 +1,9 @@
+Promise = require('bluebird'); // eslint-disable-line no-global-assign
+const { port, env } = require('./config/vars');
+const sequelize = require('./config/sequelize');
 // Init sequelize
+sequelize.init();
 const app = require('./config/express');
-
-const env = process.env.NODE_ENV || 'development';
-const port = process.env.PORT || 3000;
 
 app.listen(port, () => console.info(`server started on port ${port} (${env})`));
 

@@ -15,7 +15,6 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.DECIMAL(10, 2),
         allowNull: false,
       },
-      description: DataTypes.STRING,
     },
     {
       tableName: 'products',
